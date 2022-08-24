@@ -27,14 +27,14 @@ const Detail = ({ exerciseDetail }) => {
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
         <Typography
-          sx={{ fontSize: { lg: "40px", xs: "20px" } }}
+          sx={{ fontSize: { lg: "40px", xs: "22px" } }}
           fontWeight={700}
           textTransform="capitalize"
         >
           {name}
         </Typography>
         <Typography
-          sx={{ fontSize: { lg: "20px", xs: "15px" } }}
+          sx={{ fontSize: { lg: "20px", xs: "17px" } }}
           color="#4F4C4C"
         >
           Exercises keep you strong.{" "}

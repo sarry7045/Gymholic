@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import Exercise from "./Exercise";
-import SearchExcercise from "./SearchExcercise";
-import HeroBanner from "./HeroBanner";
+const Exercise = React.lazy(() => import("./Exercise"));
+const SearchExcercise = React.lazy(() => import("./SearchExcercise"));
+const HeroBanner = React.lazy(() => import("./HeroBanner"));
 
 const Home = () => {
   const [exercises, setExercises] = useState([]);

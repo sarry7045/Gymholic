@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 import { exerciseOptions, fetchData, youtubeOptions } from "../fetchData";
-import Detail from "./Details";
-import ExerciseVideos from "./ExerciseVideos";
-import SimilarExercises from "./SimilarExercise";
+const Detail = React.lazy(() => import("./Details"));
+const ExerciseVideos = React.lazy(() => import("./ExerciseVideos"));
+const SimilarExercises = React.lazy(() => import("./SimilarExercise"));
+
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);

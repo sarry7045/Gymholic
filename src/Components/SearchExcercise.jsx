@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../fetchData";
-import HorizontalScrollbar from "./HorizontalScrollbar";
+const HorizontalScrollbar = React.lazy(() => import("./HorizontalScrollbar"));
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",

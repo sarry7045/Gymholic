@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import BodyPart from "./BodyPart";
 import { Box, Typography } from "@mui/material";
-import ExerciseCard from "./ExerciseCard";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+const BodyPart = React.lazy(() => import("./BodyPart"));
+const ExerciseCard = React.lazy(() => import("./ExerciseCard"));
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);

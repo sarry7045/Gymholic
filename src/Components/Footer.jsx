@@ -16,6 +16,7 @@ const Footer = () => (
         style={{ marginLeft: "5px" }}
         href="https://surajyadav.vercel.app/"
         target="_blank"
+        rel="noreferrer"
       >
         Suraj Yadav
       </a>

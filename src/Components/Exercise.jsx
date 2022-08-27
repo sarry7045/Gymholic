@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../fetchData";
-import ExerciseCard from "./ExerciseCard";
-import Loader from "./Loader";
+const ExerciseCard = React.lazy(() => import("./ExerciseCard"));
+const Loader = React.lazy(() => import("./Loader"));
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,7 +29,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     };
 
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;

@@ -1,11 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
-import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
-import ExerciseDetails from "./Components/ExerciseDetails";
-import Footer from "./Components/Footer";
 import "./App.css";
+const Home = React.lazy(() => import("./Components/Home"));
+const Navbar = React.lazy(() => import("./Components/Navbar"));
+const ExerciseDetails = React.lazy(() =>
+  import("./Components/ExerciseDetails")
+);
+const Footer = React.lazy(() => import("./Components/Footer"));
 
 const App = () => {
   return (

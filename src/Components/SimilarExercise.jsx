@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Typography, Box, Stack } from "@mui/material";
 const HorizontalScrollbar = React.lazy(() => import("./HorizontalScrollbar"));
 const Loader = React.lazy(() => import("./Loader"));
@@ -50,4 +50,4 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
   </Box>
 );
 
-export default SimilarExercises;
+export default memo(SimilarExercises);

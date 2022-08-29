@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { Box, Typography } from "@mui/material";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 const BodyPart = React.lazy(() => import("./BodyPart"));
@@ -51,4 +51,4 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => {
   );
 };
 
-export default HorizontalScrollbar;
+export default memo(HorizontalScrollbar);

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState, memo } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../fetchData";
 const HorizontalScrollbar = React.lazy(() => import("./HorizontalScrollbar"));
@@ -95,4 +95,4 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   );
 };
 
-export default SearchExercises;
+export default memo(SearchExercises);

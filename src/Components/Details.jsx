@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Typography, Stack, Button } from "@mui/material";
 
 const Detail = ({ exerciseDetail }) => {
@@ -71,4 +71,4 @@ const Detail = ({ exerciseDetail }) => {
   );
 };
 
-export default Detail;
+export default memo(Detail);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../fetchData";
@@ -86,4 +86,4 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   );
 };
 
-export default Exercises;
+export default memo(Exercises);

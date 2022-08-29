@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Typography, Box, Stack } from "@mui/material";
 const Loader = React.lazy(() => import("./Loader"));
 
@@ -57,4 +57,4 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
   );
 };
 
-export default ExerciseVideos;
+export default memo(ExerciseVideos);

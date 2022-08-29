@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
@@ -45,4 +45,4 @@ const ExerciseCard = ({ exercise }) => (
   </Link>
 );
 
-export default ExerciseCard;
+export default memo(ExerciseCard);

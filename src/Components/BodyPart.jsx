@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Stack, Typography } from "@mui/material";
 
 const BodyPart = ({ item, setBodyPart, bodyPart }) => (
@@ -50,4 +50,4 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
   </Stack>
 );
 
-export default BodyPart;
+export default memo(BodyPart);

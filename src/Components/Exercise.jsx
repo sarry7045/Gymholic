@@ -2,6 +2,7 @@ import React, { useEffect, useState, memo } from "react";
 import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../fetchData";
+import Zoom from "react-reveal/Zoom";
 const ExerciseCard = React.lazy(() => import("./ExerciseCard"));
 const Loader = React.lazy(() => import("./Loader"));
 
@@ -66,7 +67,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         justifyContent="center"
       >
         {currentExercises.map((exercise, idx) => (
-          <ExerciseCard key={idx} exercise={exercise} />
+          <Zoom>
+            <ExerciseCard key={idx} exercise={exercise} />
+          </Zoom>
         ))}
       </Stack>
       <Stack sx={{ mt: { lg: "114px", xs: "70px" } }} alignItems="center">
